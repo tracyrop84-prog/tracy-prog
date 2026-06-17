@@ -71,3 +71,47 @@ bad example -it cannot start with numbers
  - we learnt that variables that variables are containers use to store data and we cane use it later.
  - two ways of declaring variables ie, let &const.
  - we have rules for naming variables and ways for writing variables,camel case is recommended in js.
+
+
+# Data types
+we have two types
+
+ - primitive
+ - object
+ 
+ ## Primitive data types
+ Are most basic data types,we have;
+ 
+ 
+ **- Number**
+ this includes all number(integers and decimals)
+ - string
+ rep words ,we have 3 ways of writing strings
+ `let  str1="double quotes i am tracy";`
+ `let  str2='single quotes i am tracy';`
+ let  str3=`back ticks i am tracy`;
+
+ 
+
+ **- boolean**
+ defines true or false
+
+> `let  johnIsMale=true;`
+> `console.log(johnIsMale);`
+> `let  johnIsMarried=false;`
+> `console.log(johnIsMarried);`
+
+ 
+ **- undefined-**
+ this means absence of value because it has not been assigned(you have declared a variable but have not assigned a value)
+ 
+
+> `let a;`
+> `console.log(a); //undefined`
+
+ **- null**
+ this is absence of value because the developer sets the variable to have no value
+ 
+
+> `let b=null;`
+> `console.log(b); //null`
