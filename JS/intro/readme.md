@@ -115,3 +115,10 @@ we have two types
 
 > `let b=null;`
 > `console.log(b); //null`
+
+
+# console.log
+used to display info on the browsers console,used for debugging,testing code
+
+# TypeOf
+used to show the type of variable whether it is a string ,number,boolean,null....
