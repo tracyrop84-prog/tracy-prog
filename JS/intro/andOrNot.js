@@ -18,3 +18,9 @@ console.log(`mary age is greater than 18 and has more tha 20k in her account ${i
 let simplified=maryAge>18&&maryBalance>20000;
 console.log(`simplified ,${simplified}`);
 console.log(`further simplification is ${maryAge>18&&maryBalance>20000}`)
+//or 
+console.log(`mary age is greater than 18 or has more tha 20k in her account ${isGreaterThan18||hasMoreThan20K}`);
+
+//not
+console.log(`this is not true = ${!true}`)
+console.log(`this is not false= ${!false}`)
