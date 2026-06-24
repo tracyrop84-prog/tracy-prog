@@ -24,3 +24,6 @@ console.log(`mary age is greater than 18 or has more tha 20k in her account ${is
 //not
 console.log(`this is not true = ${!true}`)
 console.log(`this is not false= ${!false}`)
+
+//order of presidence evaluate first not then and then or
+// for && and || work with truthy and falsey
