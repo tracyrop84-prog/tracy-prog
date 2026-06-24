@@ -7,7 +7,7 @@ if(grade>90){
 if(grade>80){
     alert("Very Good!")
 }
-if(grade=70){
+if(grade>70){
     alert("Good!")
 }
 if(grade>60){
