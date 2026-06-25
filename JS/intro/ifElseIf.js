@@ -8,10 +8,10 @@ if (grade < 50) {
   alert("fail!");
 } else if (grade < 60) {
   alert("fair!");
-} else if (grade > 70) {
+} else if (grade < 70) {
   alert("Good!");
-} else if (grade > 80) {
+} else if (grade < 80) {
   alert("Very Good!");
-} else if (grade > 90) {
+} else if (grade < 90) {
   alert("Excellent!");
 }
