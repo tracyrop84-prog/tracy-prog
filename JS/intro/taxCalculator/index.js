@@ -32,16 +32,17 @@ if (grossMonthlySalary > 108000) {
 }
 let nssf = nssfTier1 + nssfTier2;
 let employerNssf = nssf;
-alert(`your nssf contribution is${nssf}
-  your employer contributes${employerNssf}`);
-
 //shif
 
 let shifRate = 0.0275;
 let shif = grossMonthlySalary * shifRate;
-alert(`your shif is ${shif}`);
+
+//housing levy
+let housingLevyRate = 0.015;
+let housingLevy = grossMonthlySalary * housingLevyRate;
+
 //taxableIncome
-let taxableIncome = grossMonthlySalary - nssf - shif;
+let taxableIncome = grossMonthlySalary - nssf - shif - housingLevy;
 
 //paye
 let band1 = 0;
@@ -79,8 +80,16 @@ if (taxableIncome <= 24000) {
 }
 let personalRelief = 2400;
 let paye = tax - personalRelief;
-alert(`your paye is ${paye}`);
+if (paye < 0) {
+  paye = 0;
+}
 
 //net salary
-let netSalary = grossMonthlySalary - shif - nssf - paye;
-alert(`net salary is ${netSalary}`);
+let netSalary = grossMonthlySalary - shif - nssf - paye - housingLevy;
+alert(`for gross income of ${grossMonthlySalary} 
+  nssf is ${nssf}
+   taxable income is ${taxableIncome}
+  paye is ${paye}
+   shif is ${shif}
+   housing levy is ${housingLevy}
+    net salary is ${netSalary}`);
