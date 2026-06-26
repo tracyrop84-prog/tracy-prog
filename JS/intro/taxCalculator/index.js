@@ -14,27 +14,73 @@ while (true) {
 console.log(
   `Gross salary is ${grossMonthlySalary} and its type is ${typeof grossMonthlySalary}`,
 );
-//calculate Paye
-let payRate = null;
-let tier = null;
-if (grossMonthlySalary > 0 && grossMonthlySalary <= 24000) {
-  paye = grossMonthlySalary * 0.1;
-  tier = "0-24000 KES";
+
+//nssf
+let nssfTier1 = 0;
+let nssfTier2 = 0;
+if (grossMonthlySalary <= 9000) {
+  let nssfRate = 0.06;
+  nssfTier1 = grossMonthlySalary * 0.06;
 }
-if ((grossMonthlySalary > 24001 && grossMonthlySalary <= 32, 333)) {
-  paye = grossMonthlySalary * 0.25;
-  tier = "24001-32333 KES";
+if (grossMonthlySalary > 9000 && grossMonthlySalary <= 108000) {
+  nssfTier1 = 9000 * 0.06;
+  nssfTier2 = (grossMonthlySalary - 9000) * 0.06;
 }
-if (grossMonthlySalary > 32334 && grossMonthlySalary <= 500000) {
-  paye = grossMonthlySalary * 0.3;
-  tier = "32334-500000 KES";
+if (grossMonthlySalary > 108000) {
+  nssfTier1 = 9000 * 0.06;
+  nssfTier2 = (108000 - 9000) * 0.06;
 }
-if (grossMonthlySalary > 500001 && grossMonthlySalary <= 800000) {
-  paye = grossMonthlySalary * 0.325;
-  tier = "500001-800000 KES";
+let nssf = nssfTier1 + nssfTier2;
+let employerNssf = nssf;
+alert(`your nssf contribution is${nssf}
+  your employer contributes${employerNssf}`);
+
+//shif
+
+let shifRate = 0.0275;
+let shif = grossMonthlySalary * shifRate;
+alert(`your shif is ${shif}`);
+//taxableIncome
+let taxableIncome = grossMonthlySalary - nssf - shif;
+
+//paye
+let band1 = 0;
+let band2 = 0;
+let band3 = 0;
+let band4 = 0;
+let band5 = 0;
+
+let tax = 0;
+if (taxableIncome <= 24000) {
+  band1 = taxableIncome * 0.1;
+  tax = band1;
+} else if (taxableIncome <= 32333) {
+  band1 = 24000 * 0.1;
+  band2 = (taxableIncome - 24000) * 0.25;
+  tax = band1 + band2;
+} else if (taxableIncome <= 500000) {
+  band1 = 24000 * 0.1;
+  band2 = 8333 * 0.25;
+  band3 = (taxableIncome - 32333) * 0.3;
+  tax = band1 + band2 + band3;
+} else if (taxableIncome <= 800000) {
+  band1 = 24000 * 0.1;
+  band2 = 8333 * 0.25;
+  band3 = (500000 - 32333) * 0.3;
+  band4 = (taxableIncome - 500000) * 0.325;
+  tax = band1 + band2 + band3 + band4;
+} else {
+  band1 = 24000 * 0.1;
+  band2 = 8333 * 0.25;
+  band3 = (500000 - 32333) * 0.3;
+  band4 = (taxableIncome - 500000) * 0.325;
+  band5 = (taxableIncome - 800000) * 0.35;
+  tax = band1 + band2 + band3 + band4 + band5;
 }
-if (grossMonthlySalary > 800001) {
-  paye = grossMonthlySalary * 0.35;
-  tier = "800000-infinity KES";
-}
-alert(`paye is ${paye} and tier level is ${tier}`);
+let personalRelief = 2400;
+let paye = tax - personalRelief;
+alert(`your paye is ${paye}`);
+
+//net salary
+let netSalary = grossMonthlySalary - shif - nssf - paye;
+alert(`net salary is ${netSalary}`);
