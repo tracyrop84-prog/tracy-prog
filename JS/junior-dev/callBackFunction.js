@@ -6,8 +6,7 @@
 showCurrentTime();
 setInterval(showCurrentTime, 2000);*/
 
-const showCurrentTime = () => {
+setInterval(() => {
   const currentTime = new Date();
-  console.log(`current time is ${currentTime}`);
-};
-setInterval(showCurrentTime, 2000);
+  console.log(`Current time is ${currentTime}`);
+}, 2000);

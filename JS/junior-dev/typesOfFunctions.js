@@ -18,6 +18,6 @@ g();
 
 function currentTime() {
   const now = new Date();
-  alert(`the current time is` + now.toLocaleTimeString());
+  alert("the current time is" + now.toLocaleTimeString());
 }
 currentTime();
