@@ -6,4 +6,5 @@ function sayMyName() {
 console.log(n1);
 console.log(10 + 12);
 console.log(n1 > 10);
-sayMyName();
+console.log(sayMyName());
+//statements
