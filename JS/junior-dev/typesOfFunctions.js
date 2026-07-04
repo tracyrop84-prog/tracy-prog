@@ -9,7 +9,7 @@ ac(10);
 console.log(samAge);
 
 console.log(`value of ac is ${ac} its typeof is ${typeof ac}`);
-
+//anonymous
 let g = function () {
   console.log(`hello`);
 };
