@@ -12,14 +12,14 @@ const car = {
   manufacture: {
     name: "Mazda Motor Corporation",
     country: "Japan",
-    2024: "Manufacture year",
+    2024: "year manufactured",
   },
   carInformation: function () {
     alert(`car:${car.name}
         model:${car.model}
     topSpeed:${car.topSpeed}`);
   },
-  funFact: `its known for it "jinba ittai" philosophy,which means"horse and rider as one"`,
+  "fun fact": `its known for it "jinba ittai" philosophy,which means"horse and rider as one"`,
   isItClassic: true,
 };
 console.log(car);
