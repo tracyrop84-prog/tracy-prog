@@ -1,6 +1,8 @@
 import Navigation from "./Navigation";
 import MainSection from "./MainSection";
 import SideBar from "./SideBarSection";
+import "./index.css";
+
 function AmazonPage() {
   return (
     <div>
