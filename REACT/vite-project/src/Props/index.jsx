@@ -10,22 +10,24 @@
 */
 
 function Parent() {
-  const str = "Hello";//string
-  const amount = 2000;//number
-  const isOk = true;//boolean
-  const notSet = null;//null
+  const str = "Hello"; //string
+  const amount = 2000; //number
+  const isOk = true; //boolean
+  const notSet = null; //null
   return (
     <div>
       <h1>Iam the parent component</h1>
-      <Child greet={str} amount={amount} isOk={isOk} notSet={notSet} />
+      <Child1 greet={str} amount={amount} isOk={isOk} notSet={notSet} />
+      <Child2 greet={str} amount={amount} isOk={isOk} notSet={notSet} />
+      <Child3 greet={str} amount={amount} isOk={isOk} notSet={notSet} />
     </div>
   );
 }
-function Child(props) {
+function Child1(props) {
   console.log(props);
   return (
     <div>
-      <h1>Iam the child component</h1>
+      <h1>Iam the child1 component</h1>
       <ul>
         <li>
           favourite string: <b>{props.greet}</b>
@@ -41,6 +43,60 @@ function Child(props) {
         </li>
         <li>
           notSet: <b>{props.notSet}</b>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+//DESTRUCTURING PROPS
+function Child2(props) {
+  console.log(props);
+  const { greet, amount, isOk, notSet } = props;
+  return (
+    <div>
+      <h1>Iam the child2 component</h1>
+      <ul>
+        <li>
+          favourite string: <b>{greet}</b>
+        </li>
+        <li>
+          Amount: <b>{amount}</b>
+        </li>
+        <li>
+          isOk: <b>{isOk}</b>
+        </li>
+        <li>
+          isOk: <b>{isOk.toString()}</b>
+        </li>
+        <li>
+          notSet: <b>{notSet}</b>
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+function Child3({ greet, amount, isOk, notSet }) {
+  console.log({ greet, amount, isOk, notSet });
+  return (
+    <div>
+      <h1>Iam the child3 component</h1>
+      <ul>
+        <li>
+          favourite string: <b>{greet}</b>
+        </li>
+        <li>
+          Amount: <b>{amount}</b>
+        </li>
+        <li>
+          isOk: <b>{isOk}</b>
+        </li>
+        <li>
+          isOk: <b>{isOk.toString()}</b>
+        </li>
+        <li>
+          notSet: <b>{notSet}</b>
         </li>
       </ul>
     </div>
