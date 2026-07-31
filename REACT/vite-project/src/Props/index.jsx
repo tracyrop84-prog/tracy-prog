@@ -14,11 +14,20 @@ function Parent() {
   const amount = 2000; //number
   const isOk = true; //boolean
   const notSet = null; //null
+  const car = { model: "vitz", manufacture: "toyota",engine:{cc:23} };
+  const color = ["pink", "blue", "purple"];
   return (
     <div>
       <h1>Iam the parent component</h1>
       <Child1 greet={str} amount={amount} isOk={isOk} notSet={notSet} />
-      <Child2 greet={str} amount={amount} isOk={isOk} notSet={notSet} />
+      <Child2
+        greet={str}
+        amount={amount}
+        isOk={isOk}
+        notSet={notSet}
+        car={car}
+        color={color}
+      />
       <Child3 greet={str} amount={amount} isOk={isOk} notSet={notSet} />
     </div>
   );
@@ -52,7 +61,8 @@ function Child1(props) {
 //DESTRUCTURING PROPS
 function Child2(props) {
   console.log(props);
-  const { greet, amount, isOk, notSet } = props;
+  const { greet, amount, isOk, notSet, car, color } = props;
+
   return (
     <div>
       <h1>Iam the child2 component</h1>
@@ -71,6 +81,24 @@ function Child2(props) {
         </li>
         <li>
           notSet: <b>{notSet}</b>
+        </li>
+        <li>
+          car model: <b>{car.model}</b>
+        </li>
+        <li>
+          car manufacture: <b>{car.manufacture}</b>
+        </li>
+           <li>
+          car engine: <b>{car.engine.cc}</b>
+        </li>
+        <li>
+          color: <b>{color[0]}</b>
+        </li>
+        <li>
+          color: <b>{color[1]}</b>
+        </li>
+        <li>
+          color: <b>{color[2]}</b>
         </li>
       </ul>
     </div>
