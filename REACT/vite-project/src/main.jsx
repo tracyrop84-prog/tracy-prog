@@ -1,8 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import Props from "./Props/index";
+import AmazonPage2 from "./AmazonPage2.0"
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-   <Props/>
+   <AmazonPage2/>
   </StrictMode>
 );
