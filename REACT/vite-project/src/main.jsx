@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import StateAndEvents from "./StateAndEvents/ClickMe"
+import StateAndEvents from "./StateAndEvents/Form1"
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
