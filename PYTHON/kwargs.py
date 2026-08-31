@@ -8,9 +8,9 @@ my_kwargs(email="tracy.com",dict={"a":"b"},ar=[1,2,3,4])
 def area_rectangle(width,length):
     area=length*width
     print(f"for rectangle with length {length} and width {width} area is {area}")
-area_rectangle(5,2)
-area_rectangle(length=3,width=4)
+area_rectangle(5,2)#args
+area_rectangle(length=3,width=4)#kwargs
 width=6
 length=10
-area_rectangle(width,length)
-area_rectangle(width=width,length=length)
+area_rectangle(width,length)#args
+area_rectangle(width=width,length=length)#kwargs
