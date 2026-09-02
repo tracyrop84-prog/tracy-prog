@@ -38,6 +38,9 @@ class House:
     owner=""
     location=""
     architect="KIPROP"
+    def __init__(self,owner,location):
+        self.owner=owner
+        self.location=location
     def config(self,owner,location):
         self.owner=owner
         self.location=location
@@ -50,10 +53,10 @@ class House:
 #Bracket notation is for dictionary
 print("______________________________________________________")
 
-ashleys_house=House()
+ashleys_house=House("Ashley","Nakuru")
 # ashleys_house.owner="Ashley"
 # ashleys_house.location="Nakuru"
-ashleys_house.config(owner="ashley",location="Nakuru")
+# ashleys_house.config(owner="ashley",location="Nakuru")
 print(f"Ashleys House Owner {ashleys_house.owner}")
 print(f"Ashleys  Location {ashleys_house.location}")
 print(f"Ashleys  House Bedrooms {ashleys_house.bedrooms}")
@@ -64,10 +67,10 @@ print(f"Ashleys  House Designer {ashleys_house.architect}")
 ashleys_house.print_self()
 print("End of print ashley")
 print("______________________________________________________")
-lionel_house=House()
-lionel_house.owner="lionel"
-lionel_house.location="Eldama"
-lionel_house.config(owner="lionel",location="Eldama")
+lionel_house=House("Lionel","Eldama")
+# lionel_house.owner="lionel"
+# lionel_house.location="Eldama"
+# lionel_house.config(owner="lionel",location="Eldama")
 
 print(f"Lionel House Owner {lionel_house.owner}")
 print(f"Lionel Location {lionel_house.location}")
