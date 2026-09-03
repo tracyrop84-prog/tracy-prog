@@ -18,8 +18,24 @@ class BankAccount:
         self.balance=balance
         self.account_no=account_no
         
-    def get_balance(self,):
-        return self.balance
+    # data i read
+    @property
+    def balance(self):
+        print("somebody tried to read tracy balance")
+        return self._balance
+
+    # to control updated
+    @balance.setter
+    def balance(self, value):
+        if not isinstance(value, (int, float)):
+            print("Ensure you pass a number for new balance")
+            return
+        if value < 0:
+            print("Ensure new balance must not be less than 0")
+            return
+        self._balance = value
+
+    # setter
     def deposit(self,deposit_amount):
         self.balance=self.balance+deposit_amount
     def withdrawal(self,withdrawal_amount):
@@ -38,6 +54,7 @@ class BankAccount:
         
 
 tracy=BankAccount(name="tracy",balance=3000,account_no="457287792")
-tracy.deposit(600)
-tracy.withdrawal(7)
-tracy.show_account_details()
+print("tracy balance ", tracy.balance)
+# tracy.deposit(600)
+# tracy.withdrawal(7)
+# tracy.show_account_details()
