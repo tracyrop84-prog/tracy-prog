@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Client directory</h1>
+    <div>
+        {%for client in clients%}
+          <ul>
+          <li>NAME: {{client.name}}</li>
+          <li>INDUSTRY: {{client.industry}}</li>
+          <li>STATUS: {{client.status}}</li>
+          </ul>
+        {%endfor%}
+    </div>
+</body>
+</html>
